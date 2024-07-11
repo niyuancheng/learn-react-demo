@@ -1,15 +1,15 @@
-import { useState } from "react";
-function Count({number}) {
-    const [num, setNum] = useState(number);
+import { useReducer, useState } from "react";
+import { countReducer } from "../hooks/useCount";
+function Count() {
+    const [count, dispatch] = useReducer(countReducer, 0);
 
-    function add(e) {
-        console.log(`事件参数e是${e}`)
-        setNum(num => num + 1)
-    }
     return (
-        <div className="count-wrapper">
-            <div className="count">{num}</div>
-            <button className="btn" onClick={add}>+1</button>
+        <div>
+            <div>当前计数为: {count}</div>
+            <div>
+                <button onClick={() => dispatch({type: 'increment'})}>+1</button>
+                <button onClick={() => dispatch({type: 'decrement'})}>-1</button>
+            </div>
         </div>
     )
 }

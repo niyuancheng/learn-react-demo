@@ -2,6 +2,7 @@ import "./App.css";
 
 import { useReducer, useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
+import Count from "./components/Count";
 import ToDo from "./todo/ToDo";
 import ToDoItem from "./todo/ToDoItem";
 import ToDoAdd from "./todo/ToDoAdd";
@@ -58,16 +59,15 @@ function App() {
   return (
     <div className="App" >
       <ToDoAdd onClick={() => handleClick(true)}>添加任务</ToDoAdd>
-      <ToDo>
-        {tasks.map((todo, index) => {
+      <ToDo onChange={(todo) => handleChange(todo)} onDelete={(todo) => handleDelete(todo)}>
+        {tasks.map((item, index) => {
           return (
             <ToDoItem
-              key={todo.id}
-              isDone={todo.isDone}
-              onChange={(e) => handleChange(todo)}
-              onDelete={(e) => handleDelete(todo)}
+              key={item.id}
+              isDone={item.isDone}
+              item={item}
             >
-              {todo.content}
+              {item.content}
             </ToDoItem>
           );
         })}
@@ -75,6 +75,8 @@ function App() {
       <CSSTransition in={showToDoInput} timeout={500} classNames="todo-input" unmountOnExit>
         <ToDoInput onChange={(task) => handleClick(false, task)}/>
       </CSSTransition>
+
+      <Count></Count>
     </div>
   );
 }

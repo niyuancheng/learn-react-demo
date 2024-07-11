@@ -1,7 +1,6 @@
 import { useState } from "react"
 
 export default function Form(props) {
-    console.log('renderForm', props)
     const [answer, setAnswer] = useState('');
     const [status, setStatus] = useState('type');
     const handleClick = async (e) => {
