@@ -1,6 +1,7 @@
-import { useReducer, useState } from "react";
-import { countReducer } from "../hooks/useCount";
+import { useReducer } from "react";
+import { countReducer } from "../reducer/countReducer";
 function Count() {
+    console.log('render')
     const [count, dispatch] = useReducer(countReducer, 0);
 
     return (
