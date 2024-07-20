@@ -10,6 +10,7 @@ import ToDoInput from "./todo/ToDoInput";
 import { taskReducer } from "./reducer/toDoTaskReducer";
 import { useMouse } from "./hooks/useMouse";
 import Dot from "./components/Dot";
+import Login from "./components/Login";
 const initialTasks = [
   {
     content: "学React",
@@ -79,8 +80,8 @@ function App() {
       >
         <ToDoInput onChange={(task) => handleClick(false, task)} />
       </CSSTransition>
-
       <Count></Count>
+      <Login />
       <Dot />
     </div>
   );

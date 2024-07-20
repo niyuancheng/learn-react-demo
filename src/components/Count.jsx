@@ -1,8 +1,13 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { countReducer } from "../reducer/countReducer";
+import { useSelector, useDispatch } from 'react-redux';
+// import { decrement, increment } from "../store/root.slice";
+
 function Count() {
-    console.log('render')
-    const [count, dispatch] = useReducer(countReducer, 0);
+    const count = useSelector(state => {
+        return state.counter.count;
+    });
+    const dispatch = useDispatch();
 
     return (
         <div>
