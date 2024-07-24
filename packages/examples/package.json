@@ -2,13 +2,11 @@
   "name": "react-app",
   "version": "0.1.0",
   "dependencies": {
-    "@reduxjs/toolkit": "^2.2.6",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "react-scripts": "5.0.1",
     "react-transition-group": "^4.4.5",
-    "redux": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

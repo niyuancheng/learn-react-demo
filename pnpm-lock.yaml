@@ -4,17 +4,21 @@ importers:
 
   .:
     specifiers:
+      '@reduxjs/toolkit': ^2.2.6
       '@rspack/cli': ^0.7.5
       '@rspack/core': ^0.7.5
       html-webpack-plugin: ^5.6.0
       react: ^18.2.0
       react-dom: ^18.2.0
       react-redux: ^9.1.2
+      redux: ^5.0.1
       webpack: ^5.93.0
     dependencies:
+      '@reduxjs/toolkit': 2.2.6_irch7jnnqrn7hjrrnjtulxh6lm
       react: 18.3.1
       react-dom: 18.3.1_react@18.3.1
-      react-redux: 9.1.2_react@18.3.1
+      react-redux: 9.1.2_react@18.3.1+redux@5.0.1
+      redux: 5.0.1
     devDependencies:
       '@rspack/cli': 0.7.5_4kp7d3lxxgiudpvouis24wxlby
       '@rspack/core': 0.7.5
@@ -26,22 +30,18 @@ importers:
 
   packages/examples:
     specifiers:
-      '@reduxjs/toolkit': ^2.2.6
       '@testing-library/jest-dom': ^5.17.0
       '@testing-library/react': ^13.4.0
       '@testing-library/user-event': ^13.5.0
       react-scripts: 5.0.1
       react-transition-group: ^4.4.5
-      redux: ^5.0.1
       web-vitals: ^2.1.4
     dependencies:
-      '@reduxjs/toolkit': 2.2.6
       '@testing-library/jest-dom': 5.17.0
       '@testing-library/react': 13.4.0
       '@testing-library/user-event': 13.5.0
       react-scripts: 5.0.1
       react-transition-group: 4.4.5
-      redux: 5.0.1
       web-vitals: 2.1.4
 
 packages:
@@ -2251,7 +2251,7 @@ packages:
     resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
     dev: true
 
-  /@reduxjs/toolkit/2.2.6:
+  /@reduxjs/toolkit/2.2.6_irch7jnnqrn7hjrrnjtulxh6lm:
     resolution: {integrity: sha512-kH0r495c5z1t0g796eDQAkYbEQ3a1OLYN9o8jQQVZyKyw367pfRGS+qZLkHYvFHiUUdafpoSlQ2QYObIApjPWA==}
     peerDependencies:
       react: ^16.9.0 || ^17.0.0 || ^18
@@ -2263,6 +2263,8 @@ packages:
         optional: true
     dependencies:
       immer: 10.1.1
+      react: 18.3.1
+      react-redux: 9.1.2_react@18.3.1+redux@5.0.1
       redux: 5.0.1
       redux-thunk: 3.1.0_redux@5.0.1
       reselect: 5.1.1
@@ -8959,7 +8961,7 @@ packages:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
     dev: false
 
-  /react-redux/9.1.2_react@18.3.1:
+  /react-redux/9.1.2_react@18.3.1+redux@5.0.1:
     resolution: {integrity: sha512-0OA4dhM1W48l3uzmv6B7TXPCGmokUU4p1M44DGN2/D9a1FjVPukVjER1PcPX97jIg6aUeLq1XJo1IpfbgULn0w==}
     peerDependencies:
       '@types/react': ^18.2.25
@@ -8973,6 +8975,7 @@ packages:
     dependencies:
       '@types/use-sync-external-store': 0.0.3
       react: 18.3.1
+      redux: 5.0.1
       use-sync-external-store: 1.2.2_react@18.3.1
     dev: false
 
