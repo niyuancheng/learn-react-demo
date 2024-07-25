@@ -1,0 +1,14 @@
+{
+    "include": [
+        "./packages/**/*"
+    ],
+    "exclude": [
+        "**/node_modules/**"
+    ],
+    "compilerOptions": {
+        "target": "ESNext",
+        "strict": false,
+        "checkJs": false,
+        "jsx": "react",
+    }
+}

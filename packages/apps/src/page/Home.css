@@ -1,8 +1,8 @@
-.nova-header-home-container {
+.nova-home-container {
     /* height: 100%; */
     width: 100vw;
 
-    .nova-header-home-video {
+    .nova-home-video {
         height: calc(100vh);
         width: 100%;
         video {
@@ -11,5 +11,10 @@
             width: 100%;
             object-fit: cover;
         }
+    }
+
+    .nova-home-body {
+        width: 100%;
+        height: 100px;
     }
 }
