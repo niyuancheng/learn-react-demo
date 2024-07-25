@@ -1,0 +1,15 @@
+.nova-header-home-container {
+    /* height: 100%; */
+    width: 100vw;
+
+    .nova-header-home-video {
+        height: calc(100vh);
+        width: 100%;
+        video {
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

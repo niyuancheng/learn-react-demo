@@ -1,11 +1,11 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import App from "../App";
 import React from "react";
 import Home from "../page/Home";
 import Role from "../page/Role";
 import News from "../page/News";
 
-export default createBrowserRouter([
+export default createHashRouter([
     {
         path: '/',
         element: <App />,
