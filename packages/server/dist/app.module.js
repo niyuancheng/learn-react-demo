@@ -9,12 +9,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const genshion_home_module_1 = require("./module/genshion-home/genshion-home.module");
+const genshion_news_module_1 = require("./module/genshion-news/genshion-news.module");
 let AppModule = class AppModule {
+    configure(consumer) {
+    }
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [genshion_home_module_1.GenshionHomeModule],
+        imports: [genshion_home_module_1.GenshionHomeModule, genshion_news_module_1.GenshionNewsModule],
+        exports: [genshion_home_module_1.GenshionHomeModule, genshion_news_module_1.GenshionNewsModule],
     })
 ], AppModule);
 //# sourceMappingURL=app.module.js.map

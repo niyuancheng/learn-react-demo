@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { audio, logo } from "../assets";
+import { audio, logo } from "../../assets";
 // import audio from "../assets/audio.png";
 // import logo from "../assets/logo.png";
 

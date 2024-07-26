@@ -4,3 +4,9 @@ https://api-takumi-static.mihoyo.com/content_v2_user/app/16471662a82d418a/getCon
 参数：
 - iPageSize: 决定一次返回多少数据
 - iPage: 决定是第几页
+- sLangKey: 决定具体的语言类型- 中文/英文
+
+## 新闻
+https://api-takumi-static.mihoyo.com/content_v2_user/app/16471662a82d418a/getContent?iAppId=43&iInfoId=122807&sLangKey=zh-cn&iAround=0
+参数:
+- iInfoId: 新闻的id号

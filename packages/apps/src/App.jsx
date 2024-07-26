@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import "./index.css";
 
 export default function App() {

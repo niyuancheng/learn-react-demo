@@ -1,9 +1,9 @@
 import { createHashRouter } from "react-router-dom";
 import App from "../App";
 import React from "react";
-import Home from "../page/Home";
-import Role from "../page/Role";
-import News from "../page/News";
+import Home from "../page/Home/Home";
+import Role from "../page/Role/Role";
+import News from "../page/News/News";
 
 export default createHashRouter([
     {
@@ -19,7 +19,7 @@ export default createHashRouter([
                 element: <Role />
             },
             {
-                path: '/news',
+                path: '/news/:id',
                 element: <News />
             }
         ]

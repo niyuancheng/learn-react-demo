@@ -45,7 +45,7 @@ module.exports = defineConfig({
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        type: "asset/inline",
+        type: "asset/resource",
       },
     ],
   },
