@@ -20,4 +20,17 @@ export class GenshionHomeService extends BaseService {
         })
         return res.data.data.list;
     }
+
+    async getSliderData(page: number, pageSize: number) {
+        const res = await this.axiosInstance.get('/content_v2_user/app/16471662a82d418a/getContentList', {
+            params: {
+                iAppId: 43,
+                iChanId: 716,
+                iPageSize: pageSize,
+                iPage: page,
+                sLangKey: 'zh-cn'
+            }
+        })
+        return res.data.data.list;
+    }
 }

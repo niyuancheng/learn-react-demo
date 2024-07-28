@@ -16,4 +16,15 @@ export class GenshionHomeController {
             val: list
         })
     }
+
+    @Get('/slider')
+    @HttpCode(200)
+    @Header('Access-Control-Allow-Origin', '*')
+    async getSliderList(@Query('pageSize') pageSize: number, @Query('page') page: number, @Req() req: Request, @Res() res: Response) {
+        const list = await this.genshionService.getSliderData(page, pageSize);
+        res.json({
+            code: 200,
+            val: list
+        })
+    }
 }

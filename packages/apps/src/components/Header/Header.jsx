@@ -1,18 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, memo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { audio, logo } from "../../assets";
+import { audio, logo, growSystem, login } from "../../assets";
 import { useSelector, useDispatch } from 'react-redux';
 import { changeActive } from '../../store/header.store';
 import "./Header.css";
-
-export default function Header() {
+const Header = memo((props) => {
     const navList = useSelector(state => state.header.header);
     const dispatch = useDispatch();
     const location = useLocation();
 
+    const handleLoginClick = (e) => {
+        alert('login')
+    }
+
     useEffect(() => {
         const router = '/' + location.pathname.split('/')[1];
-        dispatch(changeActive(navList.filter(value => value.link === router)[0].id));
+        dispatch(changeActive(navList.filter(value => value.link === router)[0]?.id));
 
     }, [location])
     return (
@@ -37,9 +40,17 @@ export default function Header() {
                 </ul>
             </div>
             <div className='nova-header-right'>
-
+                <div className='nova-header-right-item nova-header-right-grow-system'>
+                    <span>成长关爱系统</span>
+                    <img src={growSystem} alt="" />
+                </div>
+                <div className='nova-header-right-item nova-header-right-login' onClick={handleLoginClick}>
+                    <span>登陆</span>
+                    <img src={login} alt="" />
+                </div>
             </div>
-           
         </div>
     )
-}
+})
+
+export default Header;

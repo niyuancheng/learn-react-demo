@@ -36,7 +36,8 @@ const rightBoxBarList = [
 ]
 export default function Home() {
     const [barList, setBarList] = useState(rightBoxBarList);
-    const [barNewsList, setBarNewsList] = useState([])
+    const [barNewsList, setBarNewsList] = useState([]);
+    const [sliderList, setSliderList] = useState([]);
 
     useEffect(() => {
         // console.log(barList)
@@ -52,9 +53,19 @@ export default function Home() {
                 if (Array.isArray(list)) {
                     setBarNewsList(list);
                 }
-                console.log(list)
             })
         }
+
+        axiosInstance.get('/genshion-home/slider', {
+            params: {
+                page: 1,
+                pageSize: 4
+            }
+        }).then(val => {
+            const list = val.data.val;
+            console.log(list)
+            setSliderList(list);
+        })
         return () => {
             // cancelSource.cancel('use effect');
         }
@@ -85,9 +96,20 @@ export default function Home() {
                 <h1 className="nova-home-news-title">新闻资讯</h1>
                 <div className="nova-home-news-box">
                     <div className="nova-home-news-box-left">
-                        <Slider>
-                            <div className="111"><span>111</span></div>
-                            <div className="222"><span>222</span></div>
+                        <Slider autoPlay gap={5} afterChange={(index) => {console.log('current index', index)}}>
+                            {
+                                sliderList.map(slider => {
+                                    const sExt = JSON.parse(slider.sExt);
+                                    const {url, name} = sExt['716_0'][0];
+                                    return (
+                                        <Link to={`/news/${slider.iInfoId}`}>
+                                            <div className="nova-home-slider-item" key={slider.iInfoId}>
+                                                <img src={url} alt={name}/>
+                                            </div>
+                                        </Link>
+                                    )   
+                                })
+                            }
                         </Slider>
                     </div>
                     <div className="nova-home-news-box-right">
@@ -119,8 +141,6 @@ export default function Home() {
                             }
                         </ul>
                     </div>
-                        
-
                 </div>
             </div>
         </div>

@@ -47,6 +47,28 @@
 
     .nova-header-right {
         flex-basis: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .nova-header-right-item {
+            margin-right: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity .5s ease;
+            &:hover {
+                opacity: 1;
+            }
+            img {
+                margin-left: 20px;
+                width: 27px;
+                height: 27px;
+                
+            }
+        }
         /* background-color: antiquewhite; */
     }
 }

@@ -56,6 +56,17 @@
                 width: 640px;
                 margin: 0;
                 background: rgba(38, 18, 12, 0.62);
+
+                .nova-home-slider-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
             }
 
             .nova-home-news-box-right {

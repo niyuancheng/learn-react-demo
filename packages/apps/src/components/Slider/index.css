@@ -2,6 +2,13 @@
     overflow-x: hidden;
     position: relative;
 
+    .nova-slider-track {
+        transform: translate3d(0,0,0);
+        transition-duration: .5s;
+        transition-property: transform;
+        transition-timing-function: ease;
+    }
+
     .slider-button {
         position: absolute;
         width: 40px;
