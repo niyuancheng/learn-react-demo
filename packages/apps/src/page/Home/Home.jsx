@@ -3,6 +3,7 @@ import { poster } from "../../assets";
 import "./Home.css";
 import { cancelSource, axiosInstance } from "../../api/axios";
 import { Link } from "react-router-dom";
+import Slider from "../../components/Slider";
 const rightBoxBarList = [
     {
         name: '最新',
@@ -84,7 +85,10 @@ export default function Home() {
                 <h1 className="nova-home-news-title">新闻资讯</h1>
                 <div className="nova-home-news-box">
                     <div className="nova-home-news-box-left">
-                        Left
+                        <Slider>
+                            <div className="111"><span>111</span></div>
+                            <div className="222"><span>222</span></div>
+                        </Slider>
                     </div>
                     <div className="nova-home-news-box-right">
                         <ul className="nova-home-news-box-right-bar">

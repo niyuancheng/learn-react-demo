@@ -1,53 +1,20 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { audio, logo } from "../../assets";
-// import audio from "../assets/audio.png";
-// import logo from "../assets/logo.png";
-
+import { useSelector, useDispatch } from 'react-redux';
+import { changeActive } from '../../store/header.store';
 import "./Header.css";
-export default function Header() {
-    const [navList, setNavList]  = useState([
-        {
-            content: '首 页',
-            active: true,
-            link: '/home',
-            id: 1,
-        },
-        { 
-            content: '角 色',
-            active: false,
-            link: '/role',
-            id: 2
-        },
-        {
-            content: '新 闻',
-            active: false,
-            link: '/news',
-            id: 3
-        },
-        {
-            content: '世界',
-            active: false,
-            link: '/world',
-            id: 4,
-        }
-    ]);
-    const handleClick = (value) => {
-        setNavList(navList.map(item => {
-            if (item === value) {
-                return {
-                    ...item,
-                    active: true,
-                }
-            } else {
-                return {
-                    ...item,
-                    active: false
-                }
-            }
-        }))
-    }
 
+export default function Header() {
+    const navList = useSelector(state => state.header.header);
+    const dispatch = useDispatch();
+    const location = useLocation();
+
+    useEffect(() => {
+        const router = '/' + location.pathname.split('/')[1];
+        dispatch(changeActive(navList.filter(value => value.link === router)[0].id));
+
+    }, [location])
     return (
         <div className='nova-header-wrapper'>
             <div className='nova-header-left'>
@@ -61,7 +28,7 @@ export default function Header() {
             <div className='nova-header-center'>
                 <ul className='nova-header-list'>
                     {
-                        navList.map(item => <li key={item.id} className={'nova-header-item' + (item.active ? ' nav-active' : '')} onClick={() => handleClick(item)}>
+                        navList.map(item => <li key={item.id} className={'nova-header-item' + (item.active ? ' nav-active' : '') }>
                             <Link to = {item.link}>
                                 {item.content}
                             </Link>
