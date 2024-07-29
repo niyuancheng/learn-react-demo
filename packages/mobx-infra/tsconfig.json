@@ -1,0 +1,17 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "./dist/**/*",
+        "rspack.config.cjs",
+        "./public/**/*"
+    ],
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "moduleResolution": "NodeNext",
+        "module": "NodeNext",
+        "target": "ESNext"
+    } 
+}
