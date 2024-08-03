@@ -9,7 +9,34 @@ module.exports = defineConfig({
     filename: "core.js",
   },
   module: {
-    ...(baseConfig.module || {}),
+    rules: [
+      ...(baseConfig.module.rules || []),
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "builtin:swc-loader",
+          options: {
+            jsc: {
+              parser: {
+                syntax: "ecmascript",
+                jsx: true,
+              },
+              transform: {
+                react: {
+                  pragma: "React.createElement",
+                  pragmaFrag: "React.Fragment",
+                  throwIfNamespace: true,
+                  development: false,
+                  useBuiltins: false
+                },
+              }
+            },
+          },
+        },
+        type: "javascript/auto",
+      }
+    ]
   },
   plugins: [
     ...(baseConfig.plugins || []),

@@ -9,9 +9,10 @@
         "./public/**/*"
     ],
     "compilerOptions": {
-        "experimentalDecorators": true,
-        "moduleResolution": "NodeNext",
-        "module": "NodeNext",
-        "target": "ESNext"
+        "outDir": "./dist",
+        "jsx": "preserve",
+        "jsxImportSource": "solid-js",
+        "module": "ESNext",
+        "moduleResolution": "Node10"
     } 
 }

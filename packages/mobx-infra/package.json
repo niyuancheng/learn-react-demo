@@ -4,6 +4,7 @@
     "private": true,
     "description": "",
     "main": "index.js",
+    "type": "module",
     "scripts": {
         "dev": "rspack serve -c ./rspack.config.cjs --mode development",
         "build": "rspack build -c ./rspack.config.cjs --mode production"
@@ -12,6 +13,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "mobx": "^6.13.1"
+        "mobx": "^6.13.1",
+        "solid-js": "^1.8.19"
     }
 }

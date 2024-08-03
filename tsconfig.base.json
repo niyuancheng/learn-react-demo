@@ -9,6 +9,5 @@
         "target": "ESNext",
         "strict": false,
         "checkJs": false,
-        "jsx": "react",
     }
 }

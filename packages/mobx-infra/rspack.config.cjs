@@ -3,13 +3,27 @@ const path = require("node:path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { defineConfig } = require('@rspack/cli')
 module.exports = defineConfig({
-  entry: "./src/index.ts",
+  entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "../dist"),
     filename: "core.js",
   },
   module: {
-    ...(baseConfig.module || {}),
+    rules: [
+      {
+        test: /\.(j|t)sx?$/i,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['solid', '@babel/preset-typescript'],
+              // plugins: ['solid-refresh/babel'],
+            },
+          },
+        ],
+      },
+      ...(baseConfig.module.rules || []),
+    ]
   },
   plugins: [
     ...(baseConfig.plugins || []),
