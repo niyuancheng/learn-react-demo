@@ -4,13 +4,14 @@ import { audio, logo, growSystem, login } from "../../assets";
 import { useSelector, useDispatch } from 'react-redux';
 import { changeActive } from '../../store/header.store';
 import "./Header.css";
+import { setIsShowLogin } from '../../store/login.store';
 const Header = memo((props) => {
     const navList = useSelector(state => state.header.header);
     const dispatch = useDispatch();
     const location = useLocation();
 
     const handleLoginClick = (e) => {
-        alert('login')
+        dispatch(setIsShowLogin(true));
     }
 
     useEffect(() => {

@@ -1,9 +1,8 @@
-// import React from "react";
 import { createSignal } from "solid-js"
 
 function Count(props: {num?: number}) {
     const [getCount, setCount] = createSignal<number>(0);
-    const handleClick = (state) => {
+    const handleClick = (state: 'increment' | 'decrement') => {
         switch (state) {
             case 'increment':
                 setCount(c => c + 1);

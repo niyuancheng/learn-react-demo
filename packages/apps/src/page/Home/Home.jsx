@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { poster } from "../../assets";
-import "./Home.css";
 import { cancelSource, axiosInstance } from "../../api/axios";
 import { Link } from "react-router-dom";
 import Slider from "../../components/Slider";
+import { useSelector } from "react-redux";
+
+import "./Home.css";
 const rightBoxBarList = [
     {
         name: '最新',
@@ -34,10 +36,14 @@ const rightBoxBarList = [
         id: 4
     },
 ]
+
+const LoginComponent = React.lazy(() => import('../../components/Login/index'));
+
 export default function Home() {
     const [barList, setBarList] = useState(rightBoxBarList);
     const [barNewsList, setBarNewsList] = useState([]);
     const [sliderList, setSliderList] = useState([]);
+    const isShowLogin = useSelector(state => state.login.isShowLogin);
 
     useEffect(() => {
         // console.log(barList)
@@ -143,6 +149,11 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            {
+                isShowLogin && <Suspense>
+                    <LoginComponent />
+                </Suspense>
+            }
         </div>
     )
 }
