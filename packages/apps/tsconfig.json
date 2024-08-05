@@ -1,0 +1,15 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "exclude": ["node_modules"],
+    "include": [
+        "./src/**/*"
+    ],
+    "compilerOptions": {
+        "jsx": "react",
+        "jsxFactory": "React.createElement",
+        "jsxFragmentFactory": "React.Fragment",
+        "checkJs": false,
+        "module": "ESNext",
+        "moduleResolution": "Node"
+    }
+}

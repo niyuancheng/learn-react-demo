@@ -35,7 +35,22 @@ module.exports = defineConfig({
           },
         },
         type: "javascript/auto",
-      }
+      },
+      {
+        test: /\.tsx$/,
+        use: {
+          loader: 'builtin:swc-loader',
+          options: {
+            jsc: {
+              parser: {
+                syntax: 'typescript',
+                tsx: true,
+              },
+            },
+          },
+        },
+        type: 'javascript/auto',
+      },
     ]
   },
   plugins: [

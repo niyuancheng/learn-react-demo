@@ -1,0 +1,30 @@
+.antd-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    .antd-input-addonBefore-container {
+        height: 100%;
+        display: flex;
+        line-height: 1;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.02);
+    }
+    input {
+        border: none;
+        outline: none;
+        height: 100%;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        font-size: 15px;
+        border: 1px solid #d9d9d9;
+        transition: all .5s ease;
+        color: #000;
+        
+        &:focus {
+            outline: none;
+            border: 1px solid #1677ff;
+        }
+    }
+}

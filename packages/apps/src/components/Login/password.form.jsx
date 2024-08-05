@@ -1,9 +1,10 @@
-import React from "react"
+import React from "react";
+import { Input } from "../Input";
+
 export default function PasswordForm() {
     return (
         <>
-            <input type="text" placeholder="手机号/邮箱" />
-            <input type="password" placeholder="密码" />
+            <Input placeholder="邮箱/密码" addonBefore={<span>哈哈哈哈</span>}/>
         </>
     )
 }

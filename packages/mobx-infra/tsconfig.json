@@ -13,6 +13,6 @@
         "jsx": "preserve",
         "jsxImportSource": "solid-js",
         "module": "ESNext",
-        "moduleResolution": "Node10"
+        "moduleResolution": "Bundler"
     } 
 }
