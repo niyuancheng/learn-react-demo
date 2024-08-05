@@ -1,0 +1,66 @@
+.antd-input-container {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    border: 1px solid #d9d9d9;
+    height: 30px;
+    transition: all .5s ease;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &.active {
+        border: 1px solid #d3bc8e;
+    }
+    .antd-input-addonBefore-container {
+        height: 100%;
+        display: flex;
+        line-height: 1;
+        align-items: center;
+        justify-content: center;
+        // background-color: rgba(0, 0, 0, 0.02);
+        padding: 0 10px;
+
+        &::after {
+            display: inline-block;
+            content: '';
+            width: 1px;
+            height: 60%;
+            background-color: rgba(0, 0, 0, 0.1);
+            margin-left: 10px;
+        }
+    }
+
+    .antd-input-addonAfter-container {
+        height: 100%;
+        display: flex;
+        line-height: 1;
+        align-items: center;
+        justify-content: center;
+        // background-color: rgba(0, 0, 0, 0.02);
+        padding: 0 10px;
+
+        &::before {
+            display: inline-block;
+            content: '';
+            width: 1px;
+            height: 60%;
+            background-color: rgba(0, 0, 0, 0.1);
+            margin-right: 10px;
+        }
+    }
+
+    input {
+        border: none;
+        outline: none;
+        height: 100%;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        font-size: 15px;
+        color: #878787;
+        
+        flex: 1;
+        &:focus {
+            outline: none;
+        }
+    }
+}

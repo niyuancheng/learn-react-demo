@@ -1,0 +1,145 @@
+.nova-home-container {
+    /* height: 100%; */
+    width: 100vw;
+
+    .nova-home-video {
+        height: calc(100vh);
+        width: 100%;
+        video {
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .nova-home-news {
+        width: 100%;
+        height: 910px;
+        background-image: url('../../assets/news_bg.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        overflow: hidden;
+        .nova-home-news-title {
+            position: relative;
+            margin-top: 183px;
+            width: 100%;
+            font-size: 50px;
+            font-weight: 400;
+            text-align: center;
+            background-color: transparent;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before, &::after {
+                content: '';
+                background: url('../../assets/news_line.png');
+                width: 385px;
+                height: 14px;
+            }
+
+            &::after {
+                transform: rotateY(180deg);
+            }
+        }
+
+        .nova-home-news-box {
+            display: flex;
+            justify-content: center;
+            height: 400px;
+            margin-top: 60px;
+
+            .nova-home-news-box-left {
+                position: relative;
+                width: 640px;
+                margin: 0;
+                background: rgba(38, 18, 12, 0.62);
+
+                .nova-home-slider-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .nova-home-news-box-right {
+                position: relative;
+                width: 640px;
+                margin: 0;
+                background: rgba(38, 18, 12, 0.62);
+
+                .nova-home-news-box-right-bar {
+                    list-style: none;
+                    display: flex;
+                    justify-content: flex-start;
+                    margin: 35px auto 0;
+                    li {
+                        /* margin-right: 30px; */
+                        color: #fff;
+                        position: relative;
+                        padding: 0 19px 12px;
+                        font-size: 18px;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+
+                    li.active {
+                        color: #ffd49f;
+                    }
+                }
+
+                .nova-home-news-box-right-news {
+                    list-style: none;
+                    width: 592px;
+                    margin: 0 auto;
+                    height: 260px;
+                    overflow: hidden;
+                    li {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        height: 50px;
+                        border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+                        box-sizing: content-box;
+                        font-size: 16px;
+                        color: #fff;
+                        cursor: pointer;
+                        transition: all .3s ease;
+
+                        &:hover {
+                            background-color: rgba(255,255,255,0.1);
+                        }
+
+                        .news-title {
+                            width: 420px;
+                            height: 20px;
+                            line-height: 20px;
+                            padding-left: 11px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                        .news-date {
+                            position: absolute;
+                            top: 0;
+                            right: 11px;
+                            color: rgba(255, 255, 255, 0.35);
+                            font-size: 14px;
+                            height: 50px;
+                            line-height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
