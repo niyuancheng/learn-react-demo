@@ -29,6 +29,7 @@
     "@babel/preset-typescript": "^7.24.7",
     "@rspack/cli": "^0.7.5",
     "@rspack/core": "^0.7.5",
+    "@svgr/webpack": "^8.1.0",
     "@types/express": "^4.17.17",
     "@types/jest": "^29.5.2",
     "@types/node": "^20.3.1",

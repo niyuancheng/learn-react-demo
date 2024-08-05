@@ -12,7 +12,7 @@ export const Password: React.FC<PasswordInputProps> = (props: PasswordInputProps
     const node = props.iconRender?.(visible) as React.JSX.Element;
 
     React.useEffect(() => {
-        console.log('visible changed', visible)
+        // console.log('visible changed', visible)
         props.onVisibleChange?.(props.visible);
     }, [visible])
     return (

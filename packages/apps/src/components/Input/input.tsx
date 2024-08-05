@@ -18,7 +18,7 @@ interface InputType {
     Password?: typeof Password;
 }
 
-export const Input: InputType = (props) => {
+export const Input: InputType = React.forwardRef((props, myRef) => {
 
     // const inputRef = React.useRef(null);
 
@@ -35,9 +35,9 @@ export const Input: InputType = (props) => {
     return (
         <div className="antd-input-container" style={props.style} ref={containerRef}>
             <div className="antd-input-addonBefore-container" style={{ display: props.addonBefore ? '' : 'none' }}>{props.addonBefore}</div>
-            <input type={props.type || 'text'} placeholder={props.placeholder || ''} className="antd-input" onFocus={(e) => handleInputFocus(e)} onBlur={(e) => handleInputBlur(e)} />
+            <input type={props.type || 'text'} placeholder={props.placeholder || ''} className="antd-input" onFocus={(e) => handleInputFocus(e)} onBlur={(e) => handleInputBlur(e)} ref={myRef}/>
             <div className="antd-input-addonAfter-container" style={{ display: props.addonAfter ? '' : 'none' }}>{props.addonAfter}</div>
             {props.children}
         </div>
     )
-}
+})
