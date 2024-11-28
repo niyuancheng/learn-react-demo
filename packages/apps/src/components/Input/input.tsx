@@ -19,9 +19,6 @@ interface InputType {
 }
 
 export const Input: InputType = React.forwardRef((props, myRef) => {
-
-    // const inputRef = React.useRef(null);
-
     const containerRef = React.useRef(null);
     const handleInputFocus = (e) => {
         containerRef.current.classList.add('active');

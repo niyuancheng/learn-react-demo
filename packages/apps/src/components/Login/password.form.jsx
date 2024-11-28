@@ -3,7 +3,6 @@ import { Input } from "../Input";
 import Visible from "../../assets/visible.svg";
 import UnVisible from "../../assets/unvisible.svg";
 
-console.log(Visible)
 export default function PasswordForm() {
     return (
         <>
