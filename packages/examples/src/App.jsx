@@ -11,6 +11,7 @@ import { taskReducer } from "./reducer/toDoTaskReducer";
 import { useMouse } from "./hooks/useMouse";
 import Dot from "./components/Dot";
 import Login from "./components/Login";
+import Clock from "./class-components/Clock";
 const initialTasks = [
   {
     content: "学React",
@@ -83,6 +84,7 @@ function App() {
       <Count></Count>
       <Login />
       <Dot />
+      <Clock />
     </div>
   );
 }
