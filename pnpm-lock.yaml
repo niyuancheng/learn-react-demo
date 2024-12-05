@@ -202,6 +202,9 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@iconify/json':
+        specifier: ^2.2.279
+        version: 2.2.279
       '@types/react':
         specifier: ^18.3.12
         version: 18.3.12
@@ -209,6 +212,9 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1
       '@unocss/preset-attributify':
+        specifier: ^0.65.1
+        version: 0.65.1
+      '@unocss/preset-icons':
         specifier: ^0.65.1
         version: 0.65.1
       '@vitejs/plugin-react':
@@ -2564,6 +2570,13 @@ packages:
   /@humanwhocodes/object-schema@2.0.3:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
+
+  /@iconify/json@2.2.279:
+    resolution: {integrity: sha512-9HJWOos32Qik+Mg0fTgP/FgoCpswQPAsFAJtGQv7PN3KQ3Dwta5DDfpEj/QSwdNB9xJ/gI+aFhSlULgeah7eFA==, tarball: https://nexus3.bilibili.co/repository/npm-public/@iconify/json/-/json-2.2.279.tgz}
+    dependencies:
+      '@iconify/types': 2.0.0
+      pathe: 1.1.2
+    dev: true
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==, tarball: https://nexus3.bilibili.co/repository/npm-public/@iconify/types/-/types-2.0.0.tgz}
@@ -5151,7 +5164,7 @@ packages:
       acorn: 8.12.1
 
   /acorn@7.4.1:
-    resolution: {integrity: sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==}
+    resolution: {integrity: sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==, tarball: https://nexus3.bilibili.co/repository/npm-public/acorn/-/acorn-7.4.1.tgz}
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: false
@@ -5165,7 +5178,6 @@ packages:
     resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==, tarball: https://nexus3.bilibili.co/repository/npm-public/acorn/-/acorn-8.14.0.tgz}
     engines: {node: '>=0.4.0'}
     hasBin: true
-    dev: true
 
   /address@1.2.2:
     resolution: {integrity: sha512-4B/qKCfeE/ODUaAUpSwfzazo5x29WD4r3vXiWsB7I2mSDAihwEqKO+g8GELZUQSSAo5e1XTYh3ZVfLyxBc12nA==}
@@ -10112,7 +10124,7 @@ packages:
         optional: true
     dependencies:
       abab: 2.0.6
-      acorn: 8.12.1
+      acorn: 8.14.0
       acorn-globals: 6.0.0
       cssom: 0.4.4
       cssstyle: 2.3.0
