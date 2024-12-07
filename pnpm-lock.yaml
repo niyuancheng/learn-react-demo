@@ -195,12 +195,33 @@ importers:
 
   packages/tailwindcss-component:
     dependencies:
+      '@radix-ui/react-slider':
+        specifier: ^1.2.1
+        version: 1.2.1(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-slot':
+        specifier: ^1.1.0
+        version: 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      class-variance-authority:
+        specifier: ^0.7.1
+        version: 0.7.1
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      lucide-react:
+        specifier: ^0.468.0
+        version: 0.468.0(react@18.3.1)
       react:
         specifier: ^18.2.0
         version: 18.3.1
       react-dom:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
+      tailwind-merge:
+        specifier: ^2.5.5
+        version: 2.5.5
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.15)
     devDependencies:
       '@iconify/json':
         specifier: ^2.2.279
@@ -3376,6 +3397,220 @@ packages:
     resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
     dev: true
 
+  /@radix-ui/number@1.1.0:
+    resolution: {integrity: sha512-V3gRzhVNU1ldS5XhAPTom1fOIo4ccrjjJgmE+LI2h/WaFpHmx0MQApT+KZHnx8abG6Avtfcz4WoEciMnpFT3HQ==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/number/-/number-1.1.0.tgz}
+    dev: false
+
+  /@radix-ui/primitive@1.1.0:
+    resolution: {integrity: sha512-4Z8dn6Upk0qk4P74xBhZ6Hd/w0mPEzOOLxy4xiPXOXqjF7jZS0VAKk7/x/H6FyY2zCkYJqePf1G5KmkmNJ4RBA==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/primitive/-/primitive-1.1.0.tgz}
+    dev: false
+
+  /@radix-ui/react-collection@1.1.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-GZsZslMJEyo1VKm5L1ZJY8tGDxZNPAoUeQUIbKeJfoi7Q4kmig5AsgLMYYuyYbfjd8fBmFORAIwYAkXMnXZgZw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/react-collection/-/react-collection-1.1.0.tgz}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@radix-ui/react-compose-refs': 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      '@radix-ui/react-context': 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      '@radix-ui/react-primitive': 2.0.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-slot': 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      '@types/react': 18.3.12
+      '@types/react-dom': 18.3.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    dev: false
+
+  /@radix-ui/react-compose-refs@1.1.0(@types/react@18.3.12)(react@18.3.1):
+    resolution: {integrity: sha512-b4inOtiaOnYf9KWyO3jAeeCG6FeyfY6ldiEPanbUjWd+xIk5wZeHa8yVwmrJ2vderhu/BQvzCrJI0lHd+wIiqw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/react-compose-refs/-/react-compose-refs-1.1.0.tgz}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@types/react': 18.3.12
+      react: 18.3.1
+    dev: false
+
+  /@radix-ui/react-context@1.1.0(@types/react@18.3.12)(react@18.3.1):
+    resolution: {integrity: sha512-OKrckBy+sMEgYM/sMmqmErVn0kZqrHPJze+Ql3DzYsDDp0hl0L62nx/2122/Bvps1qz645jlcu2tD9lrRSdf8A==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/react-context/-/react-context-1.1.0.tgz}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@types/react': 18.3.12
+      react: 18.3.1
+    dev: false
+
+  /@radix-ui/react-context@1.1.1(@types/react@18.3.12)(react@18.3.1):
+    resolution: {integrity: sha512-UASk9zi+crv9WteK/NU4PLvOoL3OuE6BWVKNF6hPRBtYBDXQ2u5iu3O59zUlJiTVvkyuycnqrztsHVJwcK9K+Q==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/react-context/-/react-context-1.1.1.tgz}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@types/react': 18.3.12
+      react: 18.3.1
+    dev: false
+
+  /@radix-ui/react-direction@1.1.0(@types/react@18.3.12)(react@18.3.1):
+    resolution: {integrity: sha512-BUuBvgThEiAXh2DWu93XsT+a3aWrGqolGlqqw5VU1kG7p/ZH2cuDlM1sRLNnY3QcBS69UIz2mcKhMxDsdewhjg==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/react-direction/-/react-direction-1.1.0.tgz}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@types/react': 18.3.12
+      react: 18.3.1
+    dev: false
+
+  /@radix-ui/react-primitive@2.0.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-ZSpFm0/uHa8zTvKBDjLFWLo8dkr4MBsiDLz0g3gMUwqgLHz9rTaRRGYDgvZPtBJgYCBKXkS9fzmoySgr8CO6Cw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/react-primitive/-/react-primitive-2.0.0.tgz}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@radix-ui/react-slot': 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      '@types/react': 18.3.12
+      '@types/react-dom': 18.3.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    dev: false
+
+  /@radix-ui/react-slider@1.2.1(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-bEzQoDW0XP+h/oGbutF5VMWJPAl/UU8IJjr7h02SOHDIIIxq+cep8nItVNoBV+OMmahCdqdF38FTpmXoqQUGvw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/react-slider/-/react-slider-1.2.1.tgz}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@radix-ui/number': 1.1.0
+      '@radix-ui/primitive': 1.1.0
+      '@radix-ui/react-collection': 1.1.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-compose-refs': 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      '@radix-ui/react-context': 1.1.1(@types/react@18.3.12)(react@18.3.1)
+      '@radix-ui/react-direction': 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      '@radix-ui/react-primitive': 2.0.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-use-controllable-state': 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      '@radix-ui/react-use-layout-effect': 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      '@radix-ui/react-use-previous': 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      '@radix-ui/react-use-size': 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      '@types/react': 18.3.12
+      '@types/react-dom': 18.3.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    dev: false
+
+  /@radix-ui/react-slot@1.1.0(@types/react@18.3.12)(react@18.3.1):
+    resolution: {integrity: sha512-FUCf5XMfmW4dtYl69pdS4DbxKy8nj4M7SafBgPllysxmdachynNflAdp/gCsnYWNDnge6tI9onzMp5ARYc1KNw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/react-slot/-/react-slot-1.1.0.tgz}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@radix-ui/react-compose-refs': 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      '@types/react': 18.3.12
+      react: 18.3.1
+    dev: false
+
+  /@radix-ui/react-use-callback-ref@1.1.0(@types/react@18.3.12)(react@18.3.1):
+    resolution: {integrity: sha512-CasTfvsy+frcFkbXtSJ2Zu9JHpN8TYKxkgJGWbjiZhFivxaeW7rMeZt7QELGVLaYVfFMsKHjb7Ak0nMEe+2Vfw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/react-use-callback-ref/-/react-use-callback-ref-1.1.0.tgz}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@types/react': 18.3.12
+      react: 18.3.1
+    dev: false
+
+  /@radix-ui/react-use-controllable-state@1.1.0(@types/react@18.3.12)(react@18.3.1):
+    resolution: {integrity: sha512-MtfMVJiSr2NjzS0Aa90NPTnvTSg6C/JLCV7ma0W6+OMV78vd8OyRpID+Ng9LxzsPbLeuBnWBA1Nq30AtBIDChw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/react-use-controllable-state/-/react-use-controllable-state-1.1.0.tgz}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@radix-ui/react-use-callback-ref': 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      '@types/react': 18.3.12
+      react: 18.3.1
+    dev: false
+
+  /@radix-ui/react-use-layout-effect@1.1.0(@types/react@18.3.12)(react@18.3.1):
+    resolution: {integrity: sha512-+FPE0rOdziWSrH9athwI1R0HDVbWlEhd+FR+aSDk4uWGmSJ9Z54sdZVDQPZAinJhJXwfT+qnj969mCsT2gfm5w==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/react-use-layout-effect/-/react-use-layout-effect-1.1.0.tgz}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@types/react': 18.3.12
+      react: 18.3.1
+    dev: false
+
+  /@radix-ui/react-use-previous@1.1.0(@types/react@18.3.12)(react@18.3.1):
+    resolution: {integrity: sha512-Z/e78qg2YFnnXcW88A4JmTtm4ADckLno6F7OXotmkQfeuCVaKuYzqAATPhVzl3delXE7CxIV8shofPn3jPc5Og==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/react-use-previous/-/react-use-previous-1.1.0.tgz}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@types/react': 18.3.12
+      react: 18.3.1
+    dev: false
+
+  /@radix-ui/react-use-size@1.1.0(@types/react@18.3.12)(react@18.3.1):
+    resolution: {integrity: sha512-XW3/vWuIXHa+2Uwcc2ABSfcCledmXhhQPlGbfcRXbiUQI5Icjcg19BGCZVKKInYbvUCut/ufbbLLPFC5cbb1hw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@radix-ui/react-use-size/-/react-use-size-1.1.0.tgz}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@radix-ui/react-use-layout-effect': 1.1.0(@types/react@18.3.12)(react@18.3.1)
+      '@types/react': 18.3.12
+      react: 18.3.1
+    dev: false
+
   /@reduxjs/toolkit@2.2.7(react-redux@9.1.2)(react@18.3.1):
     resolution: {integrity: sha512-faI3cZbSdFb8yv9dhDTmGwclW0vk0z5o1cia+kf7gCbaCwHI5e+7tP57mJUv22pNcNbeA62GSrPpfrUfdXcQ6g==}
     peerDependencies:
@@ -4348,14 +4583,12 @@ packages:
     resolution: {integrity: sha512-qW1Mfv8taImTthu4KoXgDfLuk4bydU6Q/TkADnDWWHwi4NX4BR+LWfTp2sVmTqRrsHvyDDTelgelxJ+SsejKKQ==, tarball: https://nexus3.bilibili.co/repository/npm-public/@types/react-dom/-/react-dom-18.3.1.tgz}
     dependencies:
       '@types/react': 18.3.12
-    dev: true
 
   /@types/react@18.3.12:
     resolution: {integrity: sha512-D2wOSq/d6Agt28q7rSI3jhU7G6aiuzljDGZ2hTZHIkrTLUI+AF3WMeKkEZ9nN2fkBAlcktT6vcZjDFiIhMYEQw==, tarball: https://nexus3.bilibili.co/repository/npm-public/@types/react/-/react-18.3.12.tgz}
     dependencies:
       '@types/prop-types': 15.7.12
       csstype: 3.1.3
-    dev: true
 
   /@types/react@18.3.3:
     resolution: {integrity: sha512-hti/R0pS0q1/xx+TsI73XIqk26eBsISZ2R0wUijXIngRK9R/e7Xw/cXVxQK7R5JjW+SV4zGcn5hXjudkN/pLIw==}
@@ -6068,6 +6301,12 @@ packages:
   /cjs-module-lexer@1.3.1:
     resolution: {integrity: sha512-a3KdPAANPbNE4ZUv9h6LckSl9zLsYOP4MBmhIPkRaeyybt+r4UghLvq+xw/YwUcC1gqylCkL4rdVs3Lwupjm4Q==}
 
+  /class-variance-authority@0.7.1:
+    resolution: {integrity: sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg==, tarball: https://nexus3.bilibili.co/repository/npm-public/class-variance-authority/-/class-variance-authority-0.7.1.tgz}
+    dependencies:
+      clsx: 2.1.1
+    dev: false
+
   /classnames@2.5.1:
     resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
     dev: false
@@ -6130,6 +6369,11 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
     dev: true
+
+  /clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==, tarball: https://nexus3.bilibili.co/repository/npm-public/clsx/-/clsx-2.1.1.tgz}
+    engines: {node: '>=6'}
+    dev: false
 
   /co@4.6.0:
     resolution: {integrity: sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==}
@@ -10452,6 +10696,14 @@ packages:
     dependencies:
       yallist: 3.1.1
 
+  /lucide-react@0.468.0(react@18.3.1):
+    resolution: {integrity: sha512-6koYRhnM2N0GGZIdXzSeiNwguv1gt/FAjZOiPl76roBi3xKEXa4WmfpxgQwTTL4KipXjefrnf3oV4IsYhi4JFA==, tarball: https://nexus3.bilibili.co/repository/npm-public/lucide-react/-/lucide-react-0.468.0.tgz}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
+    dependencies:
+      react: 18.3.1
+    dev: false
+
   /lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
     hasBin: true
@@ -13120,7 +13372,7 @@ packages:
       source-map: 0.6.1
 
   /source-map@0.6.1:
-    resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
+    resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==, tarball: https://nexus3.bilibili.co/repository/npm-public/source-map/-/source-map-0.6.1.tgz}
     engines: {node: '>=0.10.0'}
 
   /source-map@0.7.4:
@@ -13518,6 +13770,18 @@ packages:
       tslib: 2.6.3
     dev: true
 
+  /tailwind-merge@2.5.5:
+    resolution: {integrity: sha512-0LXunzzAZzo0tEPxV3I297ffKZPlKDrjj7NXphC8V5ak9yHC5zRmxnOe2m/Rd/7ivsOMJe3JZ2JVocoDdQTRBA==, tarball: https://nexus3.bilibili.co/repository/npm-public/tailwind-merge/-/tailwind-merge-2.5.5.tgz}
+    dev: false
+
+  /tailwindcss-animate@1.0.7(tailwindcss@3.4.15):
+    resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==, tarball: https://nexus3.bilibili.co/repository/npm-public/tailwindcss-animate/-/tailwindcss-animate-1.0.7.tgz}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders'
+    dependencies:
+      tailwindcss: 3.4.15(ts-node@10.9.2)
+    dev: false
+
   /tailwindcss@3.4.15(ts-node@10.9.2):
     resolution: {integrity: sha512-r4MeXnfBmSOuKUWmXe6h2CcyfzJCEk4F0pptO5jlnYSIViUkVmsawj80N5h2lO3gwcmSb4n3PuN+e+GC1Guylw==, tarball: https://nexus3.bilibili.co/repository/npm-public/tailwindcss/-/tailwindcss-3.4.15.tgz}
     engines: {node: '>=14.0.0'}
@@ -13547,7 +13811,6 @@ packages:
       sucrase: 3.35.0
     transitivePeerDependencies:
       - ts-node
-    dev: true
 
   /tailwindcss@3.4.7(ts-node@10.9.2):
     resolution: {integrity: sha512-rxWZbe87YJb4OcSopb7up2Ba4U82BoiSGUdoDr3Ydrg9ckxFS/YWsvhN323GMcddgU65QRy7JndC7ahhInhvlQ==, tarball: https://nexus3.bilibili.co/repository/npm-public/tailwindcss/-/tailwindcss-3.4.7.tgz}

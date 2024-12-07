@@ -1,3 +1,4 @@
+import { Home } from './Home';
 import './index.css';
 import React, { useState } from 'react';
 
@@ -12,14 +13,22 @@ function App() {
     }, 2000)
   }
   return (
-    <div className="App" flex="flex justify-center items-center">
+    <div className="App flex justify-center items-center">
+      <Home />
       <h1 className='text-gray-400 ml-10 underline'>哈哈哈</h1>
       <div className="i-vscode-icons:file-type-light-pnpm hover:i-vscode-icons-file-type-jss" w="20 hover:20" h="20 hover:20"></div>
-      <div className='i-svg-spinners-blocks-wave hover:i-svg-spinners-gooey-balls-1 hover:cursor-pointer' w="10 hover:10" h="10 hover:10" flex="flex justify-center items-center" bg="pink hover:pink"></div>
-      <button 
-        bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600" 
-        text="2xl orange align-center" 
-        border="hover:rounded-full" 
+
+      <div
+        className='i-svg-spinners-blocks-wave hover:i-svg-spinners-gooey-balls-1 hover:cursor-pointer'
+        w="10 hover:10"
+        h="10 hover:10"
+        flex="flex justify-center items-center"
+        bg="pink hover:pink"
+      ></div>
+      <button
+        bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
+        text="2xl orange align-center"
+        border="hover:rounded-full"
         p="5"
         cursor="default hover:pointer"
         transform="hover:scale-200 hover:rotate-180"
@@ -35,7 +44,7 @@ function App() {
           </>
         ) : <span>click me</span>
         }
-      </button>     
+      </button>
     </div>
   );
 }
