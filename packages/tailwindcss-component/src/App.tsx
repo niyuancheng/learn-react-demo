@@ -1,3 +1,4 @@
+
 import { Home } from './Home';
 import './index.css';
 import React, { useState } from 'react';
@@ -13,11 +14,10 @@ function App() {
     }, 2000)
   }
   return (
-    <div className="App flex justify-center items-center">
+    <div className="App">
       <Home />
       <h1 className='text-gray-400 ml-10 underline'>哈哈哈</h1>
       <div className="i-vscode-icons:file-type-light-pnpm hover:i-vscode-icons-file-type-jss" w="20 hover:20" h="20 hover:20"></div>
-
       <div
         className='i-svg-spinners-blocks-wave hover:i-svg-spinners-gooey-balls-1 hover:cursor-pointer'
         w="10 hover:10"
