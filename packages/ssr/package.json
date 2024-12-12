@@ -1,0 +1,26 @@
+{
+  "name": "ssr",
+  "version": "1.0.0",
+  "description": "React SSR",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server"
+  },
+  "keywords": [
+    "SSR"
+  ],
+  "author": "NovaNi",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react-dom": "^19.0.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.7",
+    "vite": "^6.0.1"
+  }
+}
