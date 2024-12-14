@@ -1,16 +1,16 @@
-import { StrictMode } from 'react'
-import { renderToString } from 'react-dom/server'
-import App from './App.jsx'
-
-/**
- * @param {string} _url
- * @desc 将 组件渲染成 html 字符串
- */
-export function render(_url) {
-  const html = renderToString(
-    <StrictMode>
-      <App />
-    </StrictMode>,
-  )
-  return { html }
+import App from "./App";
+import { renderToPipeableStream } from "react-dom/server";
+export const render = (res, template) => {
+    const [templateStart, templateEnd] = template.split('<!--app-html-->');
+    res.write(templateStart);
+    const { pipe } = renderToPipeableStream(<App/>, {
+        onShellReady() {
+            // pipe(res);
+        },  
+        onAllReady() {
+            pipe(res);
+            res.write(templateEnd);
+            res.end();
+        },
+    })
 }

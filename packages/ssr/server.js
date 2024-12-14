@@ -1,6 +1,5 @@
 import fs from 'node:fs/promises'
 import express from 'express'
-
 // Constants
 const isProduction = process.env.NODE_ENV === 'production'
 const port = process.env.PORT || 5173
@@ -35,12 +34,7 @@ if (!isProduction) {
 // Serve HTML
 app.get('/', async (req, res) => {
   try {
-    const url = req.originalUrl.replace(base, '')
-
-    /** @type {string} */
-    let template
-    /** @type {import('./src/entry-server.js').render} */
-    let render
+    let render, template, url = req.originalUrl;
     if (!isProduction) {
       // Always read fresh template in development
       template = await fs.readFile('./index.html', 'utf-8')
@@ -50,17 +44,14 @@ app.get('/', async (req, res) => {
       template = templateHtml
       render = (await import('./dist/server/entry-server.js')).render
     }
-
-    const rendered = render(url)
-
-    const html = template
-      .replace(`<!--app-head-->`, rendered.head ?? '')
-      .replace(`<!--app-html-->`, rendered.html ?? '')
-
-    res.status(200).set({ 'Content-Type': 'text/html' }).send(html)
+    render(res, template);
+    // const rendered = render(url)
+    // const html = template
+    //   .replace(`<!--app-head-->`, rendered.head ?? '')
+    //   .replace(`<!--app-html-->`, rendered.html ?? '')
+    // res.status(200).set({ 'Content-Type': 'text/html' }).send(html)
   } catch (e) {
     vite?.ssrFixStacktrace(e)
-    console.log(e.stack)
     res.status(500).end(e.stack)
   }
 })
